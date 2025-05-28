@@ -33,7 +33,7 @@
             <index>true</index>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>com.springfield</mainClass>
+              <mainClass>com.springfield.powerplant.model.NuclearSpringfield</mainClass>
             </manifest>mvn -X
             <manifestEntries>
               <mode>development</mode>
