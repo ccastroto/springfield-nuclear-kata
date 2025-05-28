@@ -10,7 +10,7 @@ import com.springfield.powerplant.service.impl.EmployeeManagementServiceImpl;
 import java.util.List;
 import java.util.Map;
 
-public class App {
+public class NuclearSpringfield {
     public static void main(String[] args) {
 
         System.out.println("=== Springfield Power Plant Employee Management System ===\n");
@@ -27,7 +27,7 @@ public class App {
          * Añade los empleados a la plantilla
          */
         
-        System.out.println("1. Creando empleados y asignándolos a departamentos...\n");
+/*        System.out.println("1. Creando empleados y asignándolos a departamentos...\n");
 
         Employee homer = employeeService.createEmployee("Homer Simpson", 1, Department.REACTOR_CONTROL, 
             ExperienceLevel.NOVATO, Shift.MORNING);
@@ -39,7 +39,7 @@ public class App {
             ExperienceLevel.EXPERTO, Shift.MORNING);
 
         // Visualiza el numero de personas empleadas en plantilla
-        System.out.println("""
+/*        System.out.println("""
                               \n2. Usuarios creados:
                                                 """);
         System.err.println("""
@@ -48,12 +48,12 @@ public class App {
         /*
          * Muestra el listado de empleadas con su info
          */
-        employeeService.listCrew();
+/*        employeeService.listCrew();
 
         /* 
          * Historia de Usuario 3: Buscar empleadas por departamento
          */
-        System.out.println("\n3. Buscando empleados por departamento...\n");
+/*        System.out.println("\n3. Buscando empleados por departamento...\n");
         List<Employee> reactorEmployees = employeeService.findEmployeesByDepartment(Department.REACTOR_CONTROL);
         System.out.println("Empleados en Control de Reactor:");
         reactorEmployees.forEach(employee -> 
@@ -64,7 +64,7 @@ public class App {
          * Cambia el nivel de experiencia de un empleado
          * Carl cambia de INTERMEDIO a EXPERTO
          */
-        System.out.println("\n4. Cambio de experiencia...\n");
+/*        System.out.println("\n4. Cambio de experiencia...\n");
         employeeService.changeEmployeeExperienceLevel(carl, ExperienceLevel.EXPERTO);
         System.out.println("Empleado " + carl.getName() + " cambió su nivel de experiencia a " + carl.getExperienceLevel().name());
         System.out.println("Empleado " + carl.toString());
@@ -75,7 +75,7 @@ public class App {
          * con el nivel de experiencia y el número de empleados en ese nivel
          */
 
-        System.out.println("\n4. Estadísticas por nivel de experiencia:\n");
+/*        System.out.println("\n4. Estadísticas por nivel de experiencia:\n");
         Map<String, Long> experienceStats = employeeService.getExperienceLevelStatistics();
         experienceStats.forEach((level, count) -> 
             System.out.println(level + ": " + count + " empleados"));
@@ -85,11 +85,11 @@ public class App {
          * Verifica si cada departamento tiene los 4 turnos cubiertos
         */
 
-        System.out.println("\n5. Verificando cobertura de turnos...\n");
+/*        System.out.println("\n5. Verificando cobertura de turnos...\n");
         for (Department department : Department.values()) {
             boolean isFullyCovered = employeeService.isDepartmentFullyCovered(department);
             System.out.println("Departamento " + department + ": " + 
                 (isFullyCovered ? "Cubierto en todos los turnos" : "No cubierto en todos los turnos"));
         }
-    }
+*/    }
 } 
