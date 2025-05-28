@@ -1,4 +1,4 @@
-package edu.asestatuas;
+package com.springfield.powerplant.model;
 
 /**
  * Hello world!

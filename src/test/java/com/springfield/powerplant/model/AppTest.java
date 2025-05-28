@@ -1,4 +1,4 @@
-package edu.asestatuas;
+package com.springfield.powerplant.model;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
