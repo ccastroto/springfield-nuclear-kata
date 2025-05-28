@@ -6,7 +6,7 @@ public enum ExperienceLevel {
     private String experienceLevel;
 
     ExperienceLevel() {
-        this.experienceLevel = experienceLevel.toLowerCase();
+        this.experienceLevel = experienceLevel;
     }
     public String getExperienceLevel() {
         return this.experienceLevel;
