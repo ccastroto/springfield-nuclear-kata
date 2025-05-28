@@ -1,19 +1,18 @@
 package com.springfield.powerplant.model;
 
-final class Employee {
+public final class Employee {
 
     private String name;
     private int id = 0;
-    private String department;
-    private String experienceLevel;
-    private String shift;
+    private enum department{};
+    private enum experienceLevel{};
+    private enum shift{};
 
-    Employee(String name, int id, String department, String experienceLevel, String shift) {
+    Employee(String name, int id, Department department, ExperienceLevel experienceLevel, Shift shift) {
         this.name = name;
         this.id = id;
-        this.department = department;
-        this.experienceLevel = experienceLevel;
-        this.shift = shift;
+        experienceLevel = experienceLevel;
+        shift = shift;
     }
 
     public String getName() {
@@ -26,24 +25,24 @@ final class Employee {
             return this.id;
         }
     }
-    public String getDepartment() {
-        return this.department;
+    public Department getDepartment(Department department) {
+        return Department.valueOf(department.name());
     }
-    public String getExperienceLevel() {
-        return this.experienceLevel;
+    public ExperienceLevel getExperienceLevel(ExperienceLevel experienceLevel) {
+        return experienceLevel.valueOf(experienceLevel.name());
     }
-    public String getShift() {
-        return this.shift;
+    public Shift getShift(Shift shift) {
+        return shift.valueOf(shift.name());
     }
 
-    public void SetExperienceLevel(String experienceLevel) {
-        this.experienceLevel = experienceLevel;
+    public void SetExperienceLevel(ExperienceLevel experienceLevel) {
+        experienceLevel = experienceLevel;
     }
 
     public String toString() {
         return this.name + "(ID:" + this.id + ", "
-                + "Nivel:" + this.experienceLevel + ", "
-                + "Turno:" + this.shift + ")";
+                + "Nivel:" +   ", "
+                + "Turno:" +  ")";
     }
 
 }
