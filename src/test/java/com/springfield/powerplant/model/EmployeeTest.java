@@ -24,14 +24,14 @@ public class EmployeeTest {
     }
     @Test
     public void testDepartment() {
-        assertEquals(Department.REACTOR_CONTROL, employee.getDepartment(Department.REACTOR_CONTROL));
+        assertEquals(Department.REACTOR_CONTROL, employee.getDepartment());
     }
     @Test
     public void testExperienceLevel() {
-        assertEquals(ExperienceLevel.NOVATO, employee.getExperienceLevel(ExperienceLevel.NOVATO));
+        assertEquals(ExperienceLevel.NOVATO, employee.getExperienceLevel());
     }
     @Test
     public void testShift() {
-        assertEquals(Shift.MORNING, employee.getShift(Shift.MORNING));
+        assertEquals(Shift.MORNING, employee.getShift());
     }
 }
