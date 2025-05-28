@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.springfield</groupId>
-  <artifactId>examen-DAM_CarlosCastroldrover</artifactId>
+  <artifactId>examen-DAM_CarlosCastroAldrover</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>examen-DAM_CarlosCastroldrover</name>
+  <name>examen-DAM_CarlosCastroAldrover</name>
   <url>https://github.com/ccastroto/examen-DAM_CarlosCastroAldrover.git</url>
 
   <properties>
