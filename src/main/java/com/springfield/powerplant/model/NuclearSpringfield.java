@@ -39,14 +39,13 @@ public class NuclearSpringfield {
         System.out.println("""
                               \n2. Usuarios creados:
                                                 """);
-        System.out.println(employeeService);
-/*        System.err.println("""
+        System.err.println("""
                 Empleados dados de alta: %d
                 """.formatted(employeeService.crewSize()));
         /*
          * Muestra el listado de empleadas con su info
          */
-/*        employeeService.listCrew();
+        employeeService.listCrew();
 
         /* 
          * Historia de Usuario 3: Buscar empleadas por departamento
