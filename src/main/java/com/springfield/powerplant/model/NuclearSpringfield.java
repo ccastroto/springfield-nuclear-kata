@@ -4,11 +4,8 @@ import com.springfield.powerplant.model.Department;
 import com.springfield.powerplant.model.Employee;
 import com.springfield.powerplant.model.ExperienceLevel;
 import com.springfield.powerplant.model.Shift;
-import com.springfield.powerplant.service.EmployeeManagementService;
-import com.springfield.powerplant.service.impl.EmployeeManagementServiceImpl;
-
-import java.util.List;
-import java.util.Map;
+import com.springfield.powerplant.model.service.EmployeeManagementService;
+import com.springfield.powerplant.model.service.EmployeeManagementServiceImpl;
 
 public class NuclearSpringfield {
     public static void main(String[] args) {
@@ -27,7 +24,7 @@ public class NuclearSpringfield {
          * Añade los empleados a la plantilla
          */
         
-/*        System.out.println("1. Creando empleados y asignándolos a departamentos...\n");
+        System.out.println("1. Creando empleados y asignándolos a departamentos...\n");
 
         Employee homer = employeeService.createEmployee("Homer Simpson", 1, Department.REACTOR_CONTROL, 
             ExperienceLevel.NOVATO, Shift.MORNING);
@@ -92,4 +89,4 @@ public class NuclearSpringfield {
                 (isFullyCovered ? "Cubierto en todos los turnos" : "No cubierto en todos los turnos"));
         }
 */    }
-} 
+}
