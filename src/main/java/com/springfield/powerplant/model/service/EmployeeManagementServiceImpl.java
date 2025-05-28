@@ -22,4 +22,9 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
     public void listCrew() {
         List.of(employeService).forEach(System.out::println);
     }
+
+   public List<Employee> findEmployeesByDepartment(Department department) {
+        return employeService.stream().filter(
+                employee -> employee.getDepartment().equals(department)).toList();
+   }
 }
