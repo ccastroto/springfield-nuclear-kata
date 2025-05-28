@@ -39,6 +39,7 @@ public class NuclearSpringfield {
         System.out.println("""
                               \n2. Usuarios creados:
                                                 """);
+        System.out.println(employeeService);
 /*        System.err.println("""
                 Empleados dados de alta: %d
                 """.formatted(employeeService.crewSize()));
