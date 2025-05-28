@@ -6,5 +6,10 @@ import com.springfield.powerplant.model.ExperienceLevel;
 import com.springfield.powerplant.model.Shift;
 
 public interface EmployeeManagementService {
+
     Employee createEmployee(String name, int id, Department department, ExperienceLevel experienceLevel, Shift shift);
+
+    Object crewSize();
+
+    void listCrew();
 }
