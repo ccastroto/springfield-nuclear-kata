@@ -13,5 +13,8 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
     public Employee createEmployee(String name, int id, Department department, ExperienceLevel experienceLevel, Shift shift) {
         return employeeservice;
     }
+    public String toString(){
+        return Employee.class.toString();
+    }
 
 }
