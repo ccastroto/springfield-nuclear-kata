@@ -7,6 +7,8 @@ import com.springfield.powerplant.model.Shift;
 import com.springfield.powerplant.model.service.EmployeeManagementService;
 import com.springfield.powerplant.model.service.EmployeeManagementServiceImpl;
 
+import java.util.List;
+
 public class NuclearSpringfield {
     public static void main(String[] args) {
 
@@ -50,7 +52,7 @@ public class NuclearSpringfield {
         /* 
          * Historia de Usuario 3: Buscar empleadas por departamento
          */
-/*        System.out.println("\n3. Buscando empleados por departamento...\n");
+        System.out.println("\n3. Buscando empleados por departamento...\n");
         List<Employee> reactorEmployees = employeeService.findEmployeesByDepartment(Department.REACTOR_CONTROL);
         System.out.println("Empleados en Control de Reactor:");
         reactorEmployees.forEach(employee -> 
