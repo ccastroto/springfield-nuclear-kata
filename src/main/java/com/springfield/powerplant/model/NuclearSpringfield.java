@@ -36,10 +36,10 @@ public class NuclearSpringfield {
             ExperienceLevel.EXPERTO, Shift.MORNING);
 
         // Visualiza el numero de personas empleadas en plantilla
-/*        System.out.println("""
+        System.out.println("""
                               \n2. Usuarios creados:
                                                 """);
-        System.err.println("""
+/*        System.err.println("""
                 Empleados dados de alta: %d
                 """.formatted(employeeService.crewSize()));
         /*
