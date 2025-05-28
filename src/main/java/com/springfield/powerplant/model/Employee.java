@@ -47,7 +47,7 @@ public class Employee  {
     public String toString() {
         return this.name + "(ID:" + this.id + ", "
                 + "Nivel:" + this.experienceLevel +  ", "
-                + "Turno:" + this.shift +  ")";
+                + "Turno:" + this.shift +  ")" + "\n";
     }
 
 }
