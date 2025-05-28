@@ -1,18 +1,23 @@
 package com.springfield.powerplant.model;
 
-public final class Employee {
+public class Employee  {
 
-    private String name;
+    private final String name;
     private int id = 0;
-    private enum department{};
-    private enum experienceLevel{};
-    private enum shift{};
+    private final Department department;
+    private final ExperienceLevel experienceLevel;
+    private final Shift shift;
 
-    Employee(String name, int id, Department department, ExperienceLevel experienceLevel, Shift shift) {
+    enum department{}
+    enum shift{}
+    enum experienceLevel{}
+
+    public Employee(String name, int id, Department department, ExperienceLevel experienceLevel, Shift shift) {
         this.name = name;
         this.id = id;
-        experienceLevel = experienceLevel;
-        shift = shift;
+        this.department = department;
+        this.experienceLevel = experienceLevel;
+        this.shift = shift;
     }
 
     public String getName() {
@@ -25,24 +30,24 @@ public final class Employee {
             return this.id;
         }
     }
-    public Department getDepartment(Department department) {
-        return Department.valueOf(department.name());
+    public Department getDepartment() {
+        return this.department;
     }
-    public ExperienceLevel getExperienceLevel(ExperienceLevel experienceLevel) {
-        return experienceLevel.valueOf(experienceLevel.name());
+    public ExperienceLevel getExperienceLevel() {
+        return this.experienceLevel;
     }
-    public Shift getShift(Shift shift) {
-        return shift.valueOf(shift.name());
+    public Shift getShift() {
+        return this.shift;
     }
 
-    public void SetExperienceLevel(ExperienceLevel experienceLevel) {
-        experienceLevel = experienceLevel;
+    public void setExperienceLevel(ExperienceLevel experienceLevel) {
+        experienceLevel = this.experienceLevel;
     }
 
     public String toString() {
         return this.name + "(ID:" + this.id + ", "
-                + "Nivel:" +   ", "
-                + "Turno:" +  ")";
+                + "Nivel:" + this.experienceLevel +  ", "
+                + "Turno:" + this.shift +  ")";
     }
 
 }
