@@ -1,4 +1,4 @@
-package com.springfield.powerplant.model.service;
+package com.springfield.powerplant.service;
 
 import com.springfield.powerplant.model.Department;
 import com.springfield.powerplant.model.Employee;
@@ -24,7 +24,9 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
     }
 
    public List<Employee> findEmployeesByDepartment(Department department) {
-        return employeService.stream().filter(
-                employee -> employee.getDepartment().equals(department)).toList();
+        return employeService.stream()
+                .filter(
+                employee -> employee.getDepartment()
+                        .equals(department)).toList();
    }
 }

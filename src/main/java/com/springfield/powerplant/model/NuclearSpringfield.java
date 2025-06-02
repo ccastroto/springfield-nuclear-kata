@@ -1,11 +1,7 @@
 package com.springfield.powerplant.model;
 
-import com.springfield.powerplant.model.Department;
-import com.springfield.powerplant.model.Employee;
-import com.springfield.powerplant.model.ExperienceLevel;
-import com.springfield.powerplant.model.Shift;
-import com.springfield.powerplant.model.service.EmployeeManagementService;
-import com.springfield.powerplant.model.service.EmployeeManagementServiceImpl;
+import com.springfield.powerplant.service.EmployeeManagementService;
+import com.springfield.powerplant.service.EmployeeManagementServiceImpl;
 
 import java.util.List;
 
@@ -63,7 +59,7 @@ public class NuclearSpringfield {
          * Cambia el nivel de experiencia de un empleado
          * Carl cambia de INTERMEDIO a EXPERTO
          */
-/*        System.out.println("\n4. Cambio de experiencia...\n");
+        System.out.println("\n4. Cambio de experiencia...\n");
         employeeService.changeEmployeeExperienceLevel(carl, ExperienceLevel.EXPERTO);
         System.out.println("Empleado " + carl.getName() + " cambió su nivel de experiencia a " + carl.getExperienceLevel().name());
         System.out.println("Empleado " + carl.toString());

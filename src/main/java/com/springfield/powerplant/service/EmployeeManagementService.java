@@ -1,4 +1,4 @@
-package com.springfield.powerplant.model.service;
+package com.springfield.powerplant.service;
 
 import com.springfield.powerplant.model.Department;
 import com.springfield.powerplant.model.Employee;
