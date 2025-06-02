@@ -16,17 +16,21 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
     public Employee createEmployee(String name, int id, Department department, ExperienceLevel experienceLevel, Shift shift) {
             return employeService.add(new Employee(name, id, department, experienceLevel, shift)) ? new Employee(name, id, department, experienceLevel, shift) : null;
     }
+    @Override
     public Object crewSize() {
         return employeService.size();
     }
+    @Override
     public void listCrew() {
         List.of(employeService).forEach(System.out::println);
     }
 
+    @Override
    public List<Employee> findEmployeesByDepartment(Department department) {
         return employeService.stream()
                 .filter(
                 employee -> employee.getDepartment()
                         .equals(department)).toList();
    }
+
 }
