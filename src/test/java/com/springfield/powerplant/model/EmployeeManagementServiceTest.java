@@ -6,17 +6,17 @@ import static org.junit.Assert.*;
 
 public class EmployeeManagementServiceTest {
 
-    private Employee employee;
+    private EmployeeManagementServiceImpl employeeManagementService;
 
     @Test
     public void createEmployee() {
-        assertNull(employee);
-        employee = new Employee("Homer Simpson", 1, Department.REACTOR_CONTROL,
+        Employee createEmployee = new Employee("Homer Simpson", 1, Department.REACTOR_CONTROL,
                 ExperienceLevel.NOVATO, Shift.MORNING);
-        assertNotNull(employee);
-        assertEquals("Homer Simpson", employee.getName());
-        assertEquals(Department.REACTOR_CONTROL, employee.getDepartment());
-        assertEquals(ExperienceLevel.NOVATO, employee.getExperienceLevel());
-        assertEquals(Shift.MORNING, employee.getShift());
+        assertNotNull(createEmployee);
+        assertEquals("Homer Simpson", createEmployee.getName());
+        assertEquals(Department.REACTOR_CONTROL, createEmployee.getDepartment());
+        assertEquals(ExperienceLevel.NOVATO, createEmployee.getExperienceLevel());
+        assertEquals(Shift.MORNING, createEmployee.getShift());
     }
+
 }
