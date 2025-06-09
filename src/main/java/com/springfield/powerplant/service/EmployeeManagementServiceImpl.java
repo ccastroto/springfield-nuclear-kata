@@ -33,4 +33,17 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
                         .equals(department)).toList();
    }
 
+
+    @Override
+    public void changeEmployeeExperienceLevel(Employee employee, ExperienceLevel experienceLevel) {
+        this.employees.stream()
+                .filter(e ->  e.getExperienceLevel().equals(experienceLevel))
+                .findFirst()
+                .ifPresent(e -> {
+                    e.setExperienceLevel(experienceLevel.incrementExperienceLevel());
+                });
+    }
+
+
+
 }
