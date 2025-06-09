@@ -10,13 +10,13 @@ public class EmployeeManagementServiceTest {
 
     @Test
     public void createEmployee() {
-        Employee createEmployee = new Employee("Homer Simpson", 1, Department.REACTOR_CONTROL,
-                ExperienceLevel.NOVATO, Shift.MORNING);
+        Employee createEmployee = new Employee("Sr Burns", 5, Department.ADMINISTRATION,
+                ExperienceLevel.EXPERTO, Shift.MORNING);
         assertNotNull(createEmployee);
-        assertEquals("Homer Simpson", createEmployee.getName());
-        assertEquals(Department.REACTOR_CONTROL, createEmployee.getDepartment());
-        assertEquals(ExperienceLevel.NOVATO, createEmployee.getExperienceLevel());
+        assertEquals("Sr Burns", createEmployee.getName());
+        assertEquals(Department.ADMINISTRATION, createEmployee.getDepartment());
+        assertEquals(ExperienceLevel.EXPERTO, createEmployee.getExperienceLevel());
         assertEquals(Shift.MORNING, createEmployee.getShift());
+        assertEquals(Employee.class, createEmployee.getClass());
     }
-
 }
