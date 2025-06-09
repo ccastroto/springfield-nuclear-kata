@@ -45,9 +45,9 @@ public class Employee  {
     }
 
     public String toString() {
-        return this.name + "(ID:" + this.id + ", "
-                + "Nivel:" + this.experienceLevel +  ", "
-                + "Turno:" + this.shift +  ")" + "\n";
+        return this.name + "(ID:" + getId() + ", "
+                + "Nivel:" + getExperienceLevel() +  ", "
+                + "Turno:" + getShift() +  ")" + "\n";
     }
 
 }
