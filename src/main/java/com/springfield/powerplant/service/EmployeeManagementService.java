@@ -6,6 +6,7 @@ import com.springfield.powerplant.model.ExperienceLevel;
 import com.springfield.powerplant.model.Shift;
 
 import java.util.List;
+import java.util.Map;
 
 public interface EmployeeManagementService {
 
@@ -18,4 +19,6 @@ public interface EmployeeManagementService {
     List<Employee> findEmployeesByDepartment(Department department);
 
     void changeEmployeeExperienceLevel(Employee employee, ExperienceLevel experienceLevel);
+
+    Map<String, Long> getExperienceLevelStatistics();
 }
