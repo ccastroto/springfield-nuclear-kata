@@ -7,6 +7,7 @@ import com.springfield.powerplant.model.Shift;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 
 public class EmployeeManagementServiceImpl implements EmployeeManagementService {
@@ -21,7 +22,10 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
     }
 
     public Employee createEmployee(String name, int id, Department department, ExperienceLevel experienceLevel, Shift shift) {
-            return employees.add(new Employee(name, id, department, experienceLevel, shift)) ? new Employee(name, id, department, experienceLevel, shift) : null;
+            Employee empleado = new Employee(name, id, department, experienceLevel, shift);
+            this.employees.add(empleado);
+            System.out.println(empleado);
+            return empleado;
     }
     @Override
     public Object crewSize() {
@@ -43,12 +47,11 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
 
     @Override
     public void changeEmployeeExperienceLevel(Employee employee, ExperienceLevel experience) {
-        this.employees.stream()
+         this.employees.stream()
                 .filter(e -> e.equals(employee))
                 .findFirst()
-                .ifPresent(e -> {
-                    e.setExperienceLevel(experience);
-                });
+                .ifPresent(e -> e.setExperienceLevel(experience));
+
     }
 
 
