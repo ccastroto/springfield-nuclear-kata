@@ -5,6 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 import static org.junit.Assert.*;
 
@@ -65,5 +67,17 @@ public class EmployeeManagementServiceTest {
 
         assertEquals(ExperienceLevel.EXPERTO, empCarl.getExperienceLevel());
         assertTrue(empCarl.getExperienceLevel() == ExperienceLevel.EXPERTO);
+    }
+
+    @Test
+    public void getExperienceLevelStatiticsTest() {
+        Map<String, Long> experienceStats = employeeManagementService.getExperienceLevelStatistics();
+        String level = empBurns.getExperienceLevel().toString();
+        Long count = experienceStats.getOrDefault(level, 0L);
+
+        assertTrue(experienceStats.containsKey(level));
+        assertTrue(experienceStats.get(level) >= 1);
+        assertEquals("EXPERTO",  level);
+        assertEquals(Long.valueOf(1L), count);
     }
 }
