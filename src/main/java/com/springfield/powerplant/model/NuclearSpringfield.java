@@ -4,6 +4,7 @@ import com.springfield.powerplant.service.EmployeeManagementService;
 import com.springfield.powerplant.service.EmployeeManagementServiceImpl;
 
 import java.util.List;
+import java.util.Map;
 
 public class NuclearSpringfield {
     public static void main(String[] args) {
@@ -70,7 +71,7 @@ public class NuclearSpringfield {
          * con el nivel de experiencia y el número de empleados en ese nivel
          */
 
-/*        System.out.println("\n4. Estadísticas por nivel de experiencia:\n");
+        System.out.println("\n5. Estadísticas por nivel de experiencia:\n");
         Map<String, Long> experienceStats = employeeService.getExperienceLevelStatistics();
         experienceStats.forEach((level, count) -> 
             System.out.println(level + ": " + count + " empleados"));
