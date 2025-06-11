@@ -42,14 +42,15 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
 
 
     @Override
-    public void changeEmployeeExperienceLevel(Employee employee, ExperienceLevel experienceLevel) {
+    public void changeEmployeeExperienceLevel(Employee employee, ExperienceLevel experience) {
         this.employees.stream()
-                .filter(e ->  e.getExperienceLevel().equals(experienceLevel))
+                .filter(e -> e.equals(employee))
                 .findFirst()
                 .ifPresent(e -> {
-                    e.setExperienceLevel(experienceLevel.incrementExperienceLevel());
+                    e.setExperienceLevel(experience);
                 });
     }
+
 
 
 
