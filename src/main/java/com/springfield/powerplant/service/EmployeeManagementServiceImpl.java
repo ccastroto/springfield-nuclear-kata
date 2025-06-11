@@ -5,9 +5,7 @@ import com.springfield.powerplant.model.Employee;
 import com.springfield.powerplant.model.ExperienceLevel;
 import com.springfield.powerplant.model.Shift;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 
 public class EmployeeManagementServiceImpl implements EmployeeManagementService {
@@ -53,6 +51,17 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
                 .ifPresent(e -> e.setExperienceLevel(experience));
 
     }
+
+    @Override
+    public Map<String, Long> getExperienceLevelStatistics() {
+        Map<String, Long> experienceStats = new HashMap<>();
+        for (Employee e : employees) {
+            String level = e.getExperienceLevel().toString();
+            experienceStats.put(level, experienceStats.getOrDefault(level, 0L) + 1);
+        }
+        return experienceStats;
+    }
+
 
 
 
