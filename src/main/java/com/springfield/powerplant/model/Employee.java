@@ -1,16 +1,14 @@
 package com.springfield.powerplant.model;
 
+import java.util.Objects;
+
 public class Employee  {
 
-    private final String name;
-    private int id = 0;
-    private final Department department;
-    private final ExperienceLevel experienceLevel;
-    private final Shift shift;
-
-    enum department{}
-    enum shift{}
-    enum experienceLevel{}
+    private String name;
+    private final int id;
+    private Department department;
+    private ExperienceLevel experienceLevel;
+    private Shift shift;
 
     public Employee(String name, int id, Department department, ExperienceLevel experienceLevel, Shift shift) {
         this.name = name;
@@ -24,11 +22,7 @@ public class Employee  {
         return this.name;
     }
     public int getId() {
-        if(this.id == 0){
-            return this.id;
-        }else {
-            return this.id;
-        }
+        return this.id;
     }
     public Department getDepartment() {
         return this.department;
@@ -40,8 +34,8 @@ public class Employee  {
         return this.shift;
     }
 
-    public void setExperienceLevel(ExperienceLevel experienceLevel) {
-        experienceLevel = this.experienceLevel;
+    public void setExperienceLevel(ExperienceLevel experience) {
+        this.experienceLevel = experience;
     }
 
     public String toString() {
