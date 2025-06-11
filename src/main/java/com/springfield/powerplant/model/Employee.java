@@ -37,6 +37,18 @@ public class Employee  {
     public void setExperienceLevel(ExperienceLevel experience) {
         this.experienceLevel = experience;
     }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return id == employee.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 
     public String toString() {
         return this.name + "(ID:" + getId() + ", "
