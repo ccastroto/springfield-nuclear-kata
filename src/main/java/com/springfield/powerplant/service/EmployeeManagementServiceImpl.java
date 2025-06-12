@@ -64,15 +64,15 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
 
     @Override
     public boolean isDepartmentFullyCovered(Department department) {
-        Set<Shift> requiredShifts = EnumSet.allOf(Shift.class);
-        Set<Shift> coveredShifts = new HashSet<>();
+        Set<Shift> checkShifs = EnumSet.allOf(Shift.class);
+        Set<Shift> shifts = new HashSet<>();
 
         for (Employee employee : employees) {
             if (employee.getDepartment() == department) {
-                coveredShifts.add(employee.getShift());
+                shifts.add(employee.getShift());
             }
         }
-        return coveredShifts.containsAll(requiredShifts);
+        return shifts.containsAll(checkShifs);
     }
 
 }
