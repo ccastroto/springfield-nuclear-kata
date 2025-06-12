@@ -80,4 +80,11 @@ public class EmployeeManagementServiceTest {
         assertEquals("EXPERTO",  level);
         assertEquals(Long.valueOf(1L), count);
     }
+    @Test
+    public void isDepartmentFullyCovered(){
+        employeeManagementService.isDepartmentFullyCovered(Department.ADMINISTRATION);
+
+        assertFalse(employeeManagementService.isDepartmentFullyCovered(Department.ADMINISTRATION));
+        assertEquals(employeeManagementService.isDepartmentFullyCovered(Department.REACTOR_CONTROL), false);
+    }
 }
