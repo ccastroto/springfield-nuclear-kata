@@ -62,8 +62,17 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
         return experienceStats;
     }
 
+    @Override
+    public boolean isDepartmentFullyCovered(Department department) {
+        Set<Shift> requiredShifts = EnumSet.allOf(Shift.class);
+        Set<Shift> coveredShifts = new HashSet<>();
 
-
-
+        for (Employee employee : employees) {
+            if (employee.getDepartment() == department) {
+                coveredShifts.add(employee.getShift());
+            }
+        }
+        return coveredShifts.containsAll(requiredShifts);
+    }
 
 }
